@@ -34,10 +34,8 @@
 		let customer = "<?php echo $customer ?>";
 		console.log(customer);
 
-		let output = document.getElementById('output');
-		// output.textContent = sale.sale();
-
 	</script>
+	<script src="scripts/script.js" defer></script>
 </head>
 <body>
 
