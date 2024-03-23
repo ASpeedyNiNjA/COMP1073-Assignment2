@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Smoothie Machine</title>
+</head>
+<body>
+	<h1>The Smooth Smoothie Machine</h1>
+	<form action="smoothie.php" method="post">
+		<!-- Customer Name -->
+		<fieldset>
+			<label for="customer">Name:</label>
+			<input type="text" name="customer" value="whatsHisName">
+		</fieldset>
+		
+		<br>
+
+		<!-- Drink Size -->
+		<fieldset>
+			<label for="size">Size:</label>
+			<input type="radio" name="size" value="small" id="small">
+			<label for="small">Small</label>
+			<input type="radio" name="size" value="medium" id="medium">
+			<label for="medium">Medium</label>
+			<input type="radio" name="size" value="large" id="large">
+			<label for="large">Large</label>
+		</fieldset>
+
+		<br>
+
+		<!-- Flavour Number -->
+		<fieldset>
+			<label for="number-of-flavours">How many flavours?:</label>
+			<input type="range" name="flavour-number" min="1" max="3" id="number-of-flavours" disabled> <!-- This input needs to be disabled until the rest of the website functionality is coded for simplicity. 1 flavour at a time to start. -->
+		</fieldset>
+
+		<br>
+
+		<!-- Flavour Names -->
+		<fieldset>
+			<label for="flavours">Flavours:</label>
+			<input type="checkbox" name="flavours[]" value="banana" id="banana">
+			<label for="banana">Banana</label>
+			<input type="checkbox" name="flavours[]" value="watermelon" id="watermelon">
+			<label for="watermelon">Watermelon</label>
+			<input type="checkbox" name="flavours[]" value="blueberry" id="blueberry">
+			<label for="blueberry">Blueberry</label>
+			<input type="checkbox" name="flavours[]" value="orange" id="orange">
+			<label for="orange">Orange</label>
+			<input type="checkbox" name="flavours[]" value="green-pear" id="green-pear">
+			<label for="green-pear">Green Pear</label>
+			<input type="checkbox" name="flavours[]" value="strawberry" id="strawberry">
+			<label for="strawberry">Strawberry</label>
+			<input type="checkbox" name="flavours[]" value="peanut-butter" id="peanut-butter">
+			<label for="peanut-butter">Peanut Butter</label>
+			<input type="checkbox" name="flavours[]" value="chocolate" id="chocolate">
+			<label for="chocolate">Chocolate</label>
+		</fieldset>
+
+		<br>
+
+		<!-- Quantity -->
+		<fieldset>
+			<label for="quantity">Quantity:</label>
+			<input type="number" name="quantity" value="1" id="quantity">
+		</fieldset>
+
+		<br>
+
+		<!-- Submit Button -->
+		<input type="submit" value="Smoothie">
+
+	</form>
+</body>
+</html>
