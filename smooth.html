@@ -8,6 +8,10 @@
 	<meta name="robots" content="noindex, nofollow">
 	<title>The Smoothie Machine</title>
 	<link rel="icon" href="images/skull-straw.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Aladin&display=swap" rel="stylesheet">
+	<link href="styles/style.css" rel="stylesheet">
 </head>
 <body>
 	<h1>The Smooth Smoothie Machine</h1>
@@ -34,9 +38,9 @@
 		<br>
 
 		<!-- Flavour Number -->
-		<fieldset>
-			<label for="number-of-flavours">How many flavours?:</label>
-			<input type="range" name="flavour-number" min="1" max="3" id="number-of-flavours" disabled> <!-- This input needs to be disabled until the rest of the website functionality is coded for simplicity. 1 flavour at a time to start. -->
+		<fieldset hidden>
+			<label for="number-of-flavours" hidden>How many flavours?:</label>
+			<input type="range" name="flavour-number" min="1" max="3" id="number-of-flavours" hidden> <!-- This input needs to be disabled until the rest of the website functionality is coded for simplicity. 1 flavour at a time to start. -->
 		</fieldset>
 
 		<br>

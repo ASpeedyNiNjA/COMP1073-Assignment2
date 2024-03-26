@@ -3,7 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Chris Trombly ~ 100051457">
+	<meta name="description" content="Assignment 2 ~ COMP1073">
+	<meta name="robots" content="noindex, nofollow">
 	<title>The Smoothie Machine</title>
+	<link rel="icon" href="images/skull-straw.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Aladin&display=swap" rel="stylesheet">
+	<link href="styles/style.css" rel="stylesheet">
+	
 	<!-- Variable Declarations from <form> -->
 	<?php
 		$customer = $_POST['customer'];
