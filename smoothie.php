@@ -31,7 +31,7 @@
 		}
 
 		// 
-		class Customer {
+		class Smoothie {
 			constructor(customer, size, quantity) {
 				this.customer = customer;
 				this.size = size;
@@ -42,24 +42,16 @@
 				}
 
 		}
-		let sale = new Customer(object.name, object.flavours, object.quantity);
-
-		let customer = "<?php echo $customer ?>";
-		console.log(customer);
+		let smooth = new Smoothie(object.name, object.flavours, object.quantity);
 
 	</script>
+	<!-- Output is generated from this deferred script to prevent loading issues -->
 	<script src="scripts/script.js" defer></script>
 </head>
 <body>
 
-<!-- Learning & Testing -->
-<h1><?php echo "$customer"?></h1>
-<p><?php echo "$size"?></p>
-<p>Flavours: <?php echo "$flavours"; ?></p>
-<p><?php echo "$quantity"?></p>
-
 <!-- Assignment Final Output -->
-<h2 id="output"></h2>
-
+<h1>The Smooth Smoothie Machine</h1>
+<p id="output"></p>
 
 </body>
