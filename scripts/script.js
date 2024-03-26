@@ -1,33 +1,42 @@
 // Message for customer with order details
 let output = document.getElementById('output');
 let priceOutput = document.getElementById('price-output');
+let image = document.getElementById('image')
 output.textContent = smooth.sale();
 priceOutput.textContent = smooth.price();
 
 // CSS Colour Changing Function
 if (smooth.flavours === "banana") {
 	output.setAttribute("id", "yellow");
+	image.setAttribute("src", "images/banana.png");
 }
 else if (smooth.flavours === "watermelon") {
-	output.setAttribute("id", "pink")
+	output.setAttribute("id", "pink");
+	image.setAttribute("src", "images/watermelon.png");
 }
 else if (smooth.flavours === "blueberry") {
-	output.setAttribute("id", "blue")
+	output.setAttribute("id", "blue");
+	image.setAttribute("src", "images/blueberry.png");
 }
 else if (smooth.flavours === "orange") {
-	output.setAttribute("id", "orange")
+	output.setAttribute("id", "orange");
+	image.setAttribute("src", "images/orange.png");
 }
 else if (smooth.flavours === "green-pear") {
-	output.setAttribute("id", "green")
+	output.setAttribute("id", "green");
+	image.setAttribute("src", "images/green-pear.png");
 }
 else if (smooth.flavours === "strawberry") {
-	output.setAttribute("id", "red")
+	output.setAttribute("id", "red");
+	image.setAttribute("src", "images/strawberry.png");
 }
 else if (smooth.flavours === "peanut-butter") {
-	output.setAttribute("id", "brown")
+	output.setAttribute("id", "brown");
+	image.setAttribute("src", "images/peanut-butter.png");
 }
 else if (smooth.flavours === "chocolate") {
-	output.setAttribute("id", "darkBrown")
+	output.setAttribute("id", "darkBrown");
+	image.setAttribute("src", "images/chocolate.png");
 }
 
 // This small script had to be deferred to prevent issues from loading while the inline JavaScript executes.

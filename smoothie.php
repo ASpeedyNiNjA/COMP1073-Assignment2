@@ -113,7 +113,7 @@
 	<main>
 		<div id="left">
 			<h2>Photo</h2>
-			<p>Lorem Ipsum</p>
+			<img src="" alt="" id="image">
 		</div>
 		<div id="right">
 			<h2>Price</h2>
