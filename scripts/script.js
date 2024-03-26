@@ -1,6 +1,8 @@
 // Message for customer with order details
 let output = document.querySelector('p');
+let priceOutput = document.getElementById('price-output');
 output.textContent = smooth.sale();
+priceOutput.textContent = smooth.price();
 
 // This small script had to be deferred to prevent issues from loading while the inline JavaScript executes.
 /*  - I attempted this assignment with PHP in order to get more practice with the language and seeing if I could get all three connected together.

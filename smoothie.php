@@ -18,7 +18,8 @@
 		$customer = $_POST['customer'];
 		$size = $_POST['size'];
 		# $flavour_number = $_POST['flavour-number']; Hidden form element for possible 'Take It Further' attempts
-		$flavours = implode(", ", $_POST['flavours']); //OpenAI. (2024). ChatGPT (3.5) [Large language model]. https://chat.openai.com
+		// $flavours = implode(", ", $_POST['flavours']); //OpenAI. (2024). ChatGPT (3.5) [Large language model]. https://chat.openai.com
+		$flavours = $_POST['flavours']; // Reverted form from array back into the last checked option for simplicity. By removing [] after the name attribute for the checkbox input. In other words, one option at a time to start.
 		$quantity = $_POST['quantity'];
 	?>
 
@@ -60,17 +61,41 @@
 
 				quantityMultiplier() {
 					let quantity = Number(this.quantity);
-					console.log(typeof quantity);
-					console.log(quantity);
+					// console.log(typeof quantity);
+					// console.log(quantity);
 					return quantity;
 				}
 
 				flavour(){
-
+					if(this.flavours === "banana") {
+						return 1.10;
+					}
+					else if (this.flavours === "watermelon") {
+						return 0.9;
+					}
+					else if (this.flavours === "blueberry") {
+						return 0.5;
+					}
+					else if (this.flavours === "orange") {
+						return 1.5;
+					}
+					else if (this.flavours === "green-pear") {
+						return 2;
+					}
+					else if (this.flavours === "strawberry") {
+						return 2.2;
+					}
+					else if (this.flavours === "peanut-butter") {
+						return 3;
+					}
+					else if (this.flavours === "chocolate") {
+						return 3;
+					}
 				}
 
 				price(){
-					console.log(this.sizeMultiplier() * this.quantityMultiplier());
+					console.log((this.sizeMultiplier() + this.flavour()) * this.quantityMultiplier());
+					return `Price: $${(this.sizeMultiplier() + this.flavour()) * this.quantityMultiplier()}`;
 				}
 
 		}
@@ -86,5 +111,6 @@
 <!-- Assignment Final Output -->
 <h1>The Smooth Smoothie Machine</h1>
 <p id="output"></p>
+<p id="price-output"></p>
 
 </body>
