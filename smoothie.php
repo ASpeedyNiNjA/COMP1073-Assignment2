@@ -17,7 +17,7 @@
 	<?php
 		$customer = $_POST['customer'];
 		$size = $_POST['size'];
-		# $flavour_number = $_POST['flavour-number'];
+		# $flavour_number = $_POST['flavour-number']; Hidden form element for possible 'Take It Further' attempts
 		$flavours = implode(", ", $_POST['flavours']); //OpenAI. (2024). ChatGPT (3.5) [Large language model]. https://chat.openai.com
 		$quantity = $_POST['quantity'];
 	?>
@@ -26,25 +26,55 @@
 	<script>
 		const object = {
 			name: "<?php echo $customer ?>",
+			size: "<?php echo $size ?>",
 			flavours: "<?php echo $flavours ?>",
 			quantity: "<?php echo $quantity ?>",
 		}
 
-		// 
+		// Class that receives data from the object and generates output for script.js
 		class Smoothie {
-			constructor(customer, size, quantity) {
+			constructor(customer, size, flavours, quantity) {
 				this.customer = customer;
 				this.size = size;
+				this.flavours = flavours;
 				this.quantity = quantity;
 			}
 				sale() {
-				 	return `${this.customer} ordered ${this.quantity} ${this.size} something flavoured Smooth Smoothies!`;
+				 	return `${this.customer} ordered ${this.quantity} ${this.size} ${this.flavours} flavoured Smooth Smoothies!`;
+				}
+
+				sizeMultiplier() {
+					if(this.size === "small") {
+						return 1;
+					}
+					else if (this.size === "medium") {
+						return 2;
+					}
+					else if (this.size === "large") {
+						return 3;
+					}
+					else {
+						console.log('Error');
+					}
+				}
+
+				quantityMultiplier() {
+					console.log(typeof this.size);
+				}
+
+				flavour(){
+
+				}
+
+				price(){
+					console.log(this.sizeMultiplier());
 				}
 
 		}
-		let smooth = new Smoothie(object.name, object.flavours, object.quantity);
+		let smooth = new Smoothie(object.name, object.size, object.flavours, object.quantity);
 
 	</script>
+
 	<!-- Output is generated from this deferred script to prevent loading issues -->
 	<script src="scripts/script.js" defer></script>
 </head>
