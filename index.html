@@ -3,7 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Chris Trombly ~ 100051457">
+	<meta name="description" content="Assignment 2 ~ COMP1073">
+	<meta name="robots" content="noindex, nofollow">
 	<title>The Smoothie Machine</title>
+	<link rel="icon" href="images/skull-straw.png" type="image/x-icon">
 </head>
 <body>
 	<h1>The Smooth Smoothie Machine</h1>
@@ -11,14 +15,14 @@
 		<!-- Customer Name -->
 		<fieldset>
 			<label for="customer">Name:</label>
-			<input type="text" name="customer" value="whatsHisName">
+			<input type="text" id="customer" name="customer" value="whatsHisName">
 		</fieldset>
 		
 		<br>
 
 		<!-- Drink Size -->
 		<fieldset>
-			<label for="size">Size:</label>
+			<label>Size:</label>
 			<input type="radio" name="size" value="small" id="small">
 			<label for="small">Small</label>
 			<input type="radio" name="size" value="medium" id="medium">
@@ -39,7 +43,7 @@
 
 		<!-- Flavour Names -->
 		<fieldset>
-			<label for="flavours">Flavours:</label>
+			<label>Flavours:</label>
 			<input type="checkbox" name="flavours[]" value="banana" id="banana">
 			<label for="banana">Banana</label>
 			<input type="checkbox" name="flavours[]" value="watermelon" id="watermelon">
