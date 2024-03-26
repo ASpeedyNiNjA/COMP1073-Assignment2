@@ -1,8 +1,34 @@
 // Message for customer with order details
-let output = document.querySelector('p');
+let output = document.getElementById('output');
 let priceOutput = document.getElementById('price-output');
 output.textContent = smooth.sale();
 priceOutput.textContent = smooth.price();
+
+// CSS Colour Changing Function
+if (smooth.flavours === "banana") {
+	output.setAttribute("id", "yellow");
+}
+else if (smooth.flavours === "watermelon") {
+	output.setAttribute("id", "pink")
+}
+else if (smooth.flavours === "blueberry") {
+	output.setAttribute("id", "blue")
+}
+else if (smooth.flavours === "orange") {
+	output.setAttribute("id", "orange")
+}
+else if (smooth.flavours === "green-pear") {
+	output.setAttribute("id", "green")
+}
+else if (smooth.flavours === "strawberry") {
+	output.setAttribute("id", "red")
+}
+else if (smooth.flavours === "peanut-butter") {
+	output.setAttribute("id", "brown")
+}
+else if (smooth.flavours === "chocolate") {
+	output.setAttribute("id", "darkBrown")
+}
 
 // This small script had to be deferred to prevent issues from loading while the inline JavaScript executes.
 /*  - I attempted this assignment with PHP in order to get more practice with the language and seeing if I could get all three connected together.

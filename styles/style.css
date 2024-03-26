@@ -18,11 +18,59 @@ body {
 h1 {
 	font-family: 'Aladin';
 	background-color: indianred;
-	height: 600px;
+	/* height: 600px; */
 	
 }
 
-p {
-	height: 500px;
+main {
+	margin: auto;
+	width: auto;
+	height: 525px;
+	display: flex;
+	justify-content: center;
+}
+
+#left {
 	width: 500px;
+	height:500px;
+	background-color: lightgrey;
+	border-radius: 20%;
+	text-align: center;
+}
+#right {
+	width: 500px;
+	height:500px;
+	background-color: lightgreen;
+	border-radius: 20%;
+	text-align: center;
+}
+p {
+	text-align: center;
+}
+
+/* Colour Changing Code for script.js Function */
+#yellow {
+	background-color: lightyellow;
+}
+#pink {
+	background-color: lightpink;
+}
+#blue {
+	background-color: lightblue;
+}
+#orange {
+	background-color: lightsalmon;
+}
+#green {
+	background-color: lightgreen;
+}
+#red {
+	background-color: lightcoral;
+}
+#brown {
+	background-color: #c19a6b;
+}
+#darkBrown {
+	background-color: #987654;
+	color: antiquewhite;
 }

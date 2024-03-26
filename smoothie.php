@@ -108,9 +108,18 @@
 </head>
 <body>
 
-<!-- Assignment Final Output -->
-<h1>The Smooth Smoothie Machine</h1>
-<p id="output"></p>
-<p id="price-output"></p>
+	<!-- Assignment Final Output -->
+	<h1>The Smooth Smoothie Machine</h1>
+	<main>
+		<div id="left">
+			<h2>Photo</h2>
+			<p>Lorem Ipsum</p>
+		</div>
+		<div id="right">
+			<h2>Price</h2>
+			<p id="price-output"></p>
+		</div>
+	</main>
+	<p id="output"></p>
 
 </body>
