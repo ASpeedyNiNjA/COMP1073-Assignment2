@@ -95,7 +95,7 @@
 
 				price(){
 					console.log((this.sizeMultiplier() + this.flavour()) * this.quantityMultiplier());
-					return `Price: $${(this.sizeMultiplier() + this.flavour()) * this.quantityMultiplier()}`;
+					return `Price: $${((this.sizeMultiplier() + this.flavour()) * this.quantityMultiplier()).toFixed(2)}`;
 				}
 
 		}
