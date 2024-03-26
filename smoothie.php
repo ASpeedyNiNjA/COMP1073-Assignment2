@@ -12,8 +12,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Aladin&display=swap" rel="stylesheet">
 	<link href="styles/style.css" rel="stylesheet">
-	
-	<!-- Variable Declarations from <form> -->
+
+	<!-- Variable Declarations from <form> using PHP -->
 	<?php
 		$customer = $_POST['customer'];
 		$size = $_POST['size'];
@@ -21,21 +21,25 @@
 		$flavours = implode(", ", $_POST['flavours']); //OpenAI. (2024). ChatGPT (3.5) [Large language model]. https://chat.openai.com
 		$quantity = $_POST['quantity'];
 	?>
+
+	<!-- Saving the PHP variables in a JS object for initializing into a new class -->
 	<script>
 		const object = {
 			name: "<?php echo $customer ?>",
 			flavours: "<?php echo $flavours ?>",
 			quantity: "<?php echo $quantity ?>",
 		}
+
+		// 
 		class Customer {
 			constructor(customer, size, quantity) {
 				this.customer = customer;
 				this.size = size;
 				this.quantity = quantity;
 			}
-				// sale() {
-				// 	return `${this.name} ordered ${this.quantity} ${this.size} something flavoured Smooth Smoothies`;
-				// }
+				sale() {
+				 	return `${this.customer} ordered ${this.quantity} ${this.size} something flavoured Smooth Smoothies!`;
+				}
 
 		}
 		let sale = new Customer(object.name, object.flavours, object.quantity);
