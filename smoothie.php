@@ -59,7 +59,10 @@
 				}
 
 				quantityMultiplier() {
-					console.log(typeof this.size);
+					let quantity = Number(this.quantity);
+					console.log(typeof quantity);
+					console.log(quantity);
+					return quantity;
 				}
 
 				flavour(){
@@ -67,7 +70,7 @@
 				}
 
 				price(){
-					console.log(this.sizeMultiplier());
+					console.log(this.sizeMultiplier() * this.quantityMultiplier());
 				}
 
 		}
